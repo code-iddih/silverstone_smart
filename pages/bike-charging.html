@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<!-- Silverstone Smart Parking | Bike & E-Bike Charging Page -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Silverstone Smart Parking | Bike & E-Bike Charging Stations</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <style>
+    .bike-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.2rem; margin-bottom: 2.5rem; }
+    .bike-card {
+      background: #111827;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px;
+      overflow: hidden;
+      transition: transform 0.25s;
+    }
+    .bike-card:hover { transform: translateY(-3px); }
+    .bike-card-img { height: 160px; overflow: hidden; }
+    .bike-card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
+    .bike-card:hover .bike-card-img img { transform: scale(1.05); }
+    .bike-card-body { padding: 1.2rem; }
+    .bike-card-title { font-family: 'DM Serif Display',serif; font-size: 1.1rem; margin-bottom: 0.4rem; }
+    .bike-card-desc { font-size: 0.82rem; color: rgba(255,255,255,0.45); line-height: 1.6; margin-bottom: 0; }
+    .locker-table th, .locker-table td { padding: 0.8rem 1rem; }
+    @media (max-width:768px) { .bike-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar" aria-label="Main navigation">
+    <a href="../index.html" class="nav-logo">
+      <div class="nav-logo-icon">⚡</div>
+      <span class="nav-logo-text">SILVERSTONE <span>SMART</span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="ev-parking.html">EV Parking</a></li>
+      <li><a href="charging.html">Charging</a></li>
+      <li><a href="bike-charging.html" class="active">Bike &amp; E-Bike</a></li>
+      <li><a href="travel.html">Travel &amp; Access</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="login.html" class="nav-cta">Login</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+  </nav>
+
+  <div class="page-header">
+    <div class="grid-overlay"></div>
+    <div class="page-header-inner">
+      <div class="breadcrumb"><a href="../index.html">Home</a> › <span>Bike &amp; E-Bike Charging</span></div>
+      <h1 class="page-title animate-fade-up delay-1">BIKE &amp; E-BIKE CHARGING</h1>
+      <p class="page-subtitle animate-fade-up delay-2">Secure bike parking and dedicated e-bike charging racks across Silverstone Circuit. Sustainable travel starts here.</p>
+    </div>
+  </div>
+
+  <main class="container">
+
+    <!-- HERO IMAGE -->
+    <img src="https://images.unsplash.com/photo-1571068316344-75bc76f77890?w=1200&q=80"
+         alt="Electric bikes parked at a modern charging station outdoors"
+         class="img-hero animate-fade-in delay-1"
+         style="margin-bottom:0.4rem;">
+    <p style="font-size:0.7rem;color:rgba(255,255,255,0.2);margin-bottom:2rem;">Image: Unsplash — free to use under Unsplash Licence</p>
+
+    <!-- STATION CARDS -->
+    <div class="section-label">Charging Stations</div>
+    <h2 class="section-title">Bike Charging Locations</h2>
+    <div class="bike-grid">
+      <div class="bike-card animate-fade-up delay-1">
+        <div class="bike-card-img">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=70"
+               alt="Bike charging rack near the main entrance">
+        </div>
+        <div class="bike-card-body">
+          <div class="bike-card-title">Zone A — Main Entrance</div>
+          <p class="bike-card-desc">16 racks with e-bike charging. Covered shelter. Near Gate 2. Bosch and Shimano connectors available.</p>
+          <span class="badge badge-green" style="margin-top:0.8rem;display:inline-block;">Open</span>
+        </div>
+      </div>
+      <div class="bike-card animate-fade-up delay-2">
+        <div class="bike-card-img">
+          <img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=600&q=70"
+               alt="E-bike charging point in south car park">
+        </div>
+        <div class="bike-card-body">
+          <div class="bike-card-title">Zone B — South Car Park</div>
+          <p class="bike-card-desc">12 racks adjacent to the shuttle bus stop. Open-air but sheltered. Universal connector panel.</p>
+          <span class="badge badge-green" style="margin-top:0.8rem;display:inline-block;">Open</span>
+        </div>
+      </div>
+      <div class="bike-card animate-fade-up delay-3">
+        <div class="bike-card-img">
+          <img src="https://images.unsplash.com/photo-1485965120184-e220f721d03e?w=600&q=70"
+               alt="Bicycle storage lockers near Gate 3">
+        </div>
+        <div class="bike-card-body">
+          <div class="bike-card-title">Gate 3 — Covered Lockers</div>
+          <p class="bike-card-desc">Secure individual lockers with built-in charging. First hour free. Suitable for high-value or cargo e-bikes.</p>
+          <span class="badge badge-amber" style="margin-top:0.8rem;display:inline-block;">Limited</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- COMPATIBLE CONNECTORS TABLE -->
+    <div class="section-label">Compatibility</div>
+    <h2 class="section-title">Compatible E-Bike Connectors</h2>
+    <div class="table-wrapper">
+      <table class="styled-table locker-table" aria-label="E-bike connector compatibility by brand">
+        <thead>
+          <tr>
+            <th>Brand</th>
+            <th>Motor System</th>
+            <th>Connector Type</th>
+            <th>Charging Time (Empty–Full)</th>
+            <th>Available at Silverstone</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Bosch</strong></td>
+            <td>Active / Performance Line</td>
+            <td>Bosch Proprietary</td>
+            <td>3–4 hours</td>
+            <td><span class="badge badge-green">✓ Yes</span></td>
+          </tr>
+          <tr>
+            <td><strong>Shimano</strong></td>
+            <td>STEPS E6000 / E8000</td>
+            <td>Shimano Proprietary</td>
+            <td>3–5 hours</td>
+            <td><span class="badge badge-green">✓ Yes</span></td>
+          </tr>
+          <tr>
+            <td><strong>Brose</strong></td>
+            <td>Drive S / T</td>
+            <td>USB-C (36V)</td>
+            <td>2.5–4 hours</td>
+            <td><span class="badge badge-green">✓ Yes</span></td>
+          </tr>
+          <tr>
+            <td><strong>Panasonic</strong></td>
+            <td>GX Ultimate</td>
+            <td>Panasonic Proprietary</td>
+            <td>4–5 hours</td>
+            <td><span class="badge badge-amber">⚠ Zone A only</span></td>
+          </tr>
+          <tr>
+            <td><strong>Fazua</strong></td>
+            <td>Ride 50 / 60</td>
+            <td>USB-C</td>
+            <td>2–3 hours</td>
+            <td><span class="badge badge-green">✓ Yes</span></td>
+          </tr>
+          <tr>
+            <td><strong>Other / Universal</strong></td>
+            <td>Any</td>
+            <td>Standard socket (13A)</td>
+            <td>Varies by charger</td>
+            <td><span class="badge badge-green">✓ All zones</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- SUSTAINABLE TRAVEL SECTION -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:2rem;">
+      <div class="card animate-fade-up delay-1">
+        <h3 style="font-family:'DM Serif Display',serif;font-size:1.2rem;margin-bottom:1rem;">🌿 Why Cycle to Silverstone?</h3>
+        <ul class="nested-list">
+          <li>Environmental Benefits
+            <ul>
+              <li>Zero emissions per journey</li>
+              <li>Contributes to Silverstone's net-zero 2030 target</li>
+            </ul>
+          </li>
+          <li>Practical Advantages
+            <ul>
+              <li>Skip road queues on race days</li>
+              <li>Dedicated secure parking — no waiting</li>
+              <li>Free e-bike charging at all stations</li>
+            </ul>
+          </li>
+          <li>Route Support
+            <ul>
+              <li>Signed cycling routes from Towcester (5 miles)</li>
+              <li>NCN Route 70 passes within 1 mile of the circuit</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="card animate-fade-up delay-2">
+        <img src="https://images.unsplash.com/photo-1511994298241-608e28f14fde?w=600&q=80"
+             alt="Cyclist on a road near Silverstone Circuit"
+             class="img-rounded"
+             style="width:100%;height:200px;object-fit:cover;margin-bottom:1rem;">
+        <p style="font-size:0.7rem;color:rgba(255,255,255,0.2);margin-bottom:0.8rem;">Image: Unsplash — free to use under Unsplash Licence</p>
+        <p style="font-size:0.88rem;color:rgba(255,255,255,0.55);">Silverstone sits at the heart of Northamptonshire's cycling network, with quiet rural roads and dedicated paths connecting all nearby towns.</p>
+        <a href="travel.html" class="download-btn">🗺 View Cycling Routes</a>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <div class="footer-logo-text">SILVERSTONE <span>SMART</span> PARKING</div>
+        <p class="footer-desc">Real-time EV parking and charging for Silverstone visitors.</p>
+      </div>
+      <div>
+        <div class="footer-heading">Pages</div>
+        <ul class="footer-links-list">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="ev-parking.html">EV Parking</a></li>
+          <li><a href="charging.html">Charging Info</a></li>
+          <li><a href="travel.html">Travel &amp; Access</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Help</div>
+        <ul class="footer-links-list">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Legal</div>
+        <ul class="footer-links-list">
+          <li><a href="#">Privacy Notice</a></li>
+          <li><a href="#">Cookie Policy</a></li>
+          <li><a href="#">Accessibility</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Silverstone Smart Parking</span>
+      <div class="footer-bottom-links"><a href="#">Privacy</a><a href="#">Accessibility</a></div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

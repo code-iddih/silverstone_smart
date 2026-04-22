@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<!-- Silverstone Smart Parking | Login & Register Page -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Silverstone Smart Parking | Login — Access Your Parking Account</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <!-- Internal CSS for login page layout -->
+  <style>
+    .login-page {
+      min-height: calc(100vh - 64px);
+      background: linear-gradient(135deg, #060d17, #0B1F2E 60%, #081a12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 1rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .login-container { width: 100%; max-width: 440px; position: relative; z-index: 2; }
+    .login-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 24px;
+      padding: 2.5rem;
+      backdrop-filter: blur(20px);
+    }
+    .login-logo { text-align: center; margin-bottom: 2rem; }
+    .login-logo-icon {
+      width: 60px; height: 60px;
+      background: #0B6E4F;
+      border-radius: 14px;
+      margin: 0 auto 0.8rem;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.7rem;
+    }
+    .login-logo h1 {
+      font-size: 1.9rem;
+      letter-spacing: 0.04em;
+    }
+    .login-logo p { font-size: 0.83rem; color: rgba(255,255,255,0.35); margin: 0.3rem 0 0; }
+    .error-box {
+      display: none;
+      background: rgba(239,68,68,0.1);
+      border: 1px solid rgba(239,68,68,0.25);
+      border-radius: 8px;
+      padding: 0.7rem 1rem;
+      font-size: 0.83rem;
+      color: #f87171;
+      margin-bottom: 1.2rem;
+    }
+    .form-footer-link {
+      text-align: center;
+      margin-top: 1.2rem;
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.35);
+    }
+    .form-footer-link a { color: #0EA5E9; }
+    .tab-panel { display: none; }
+    .tab-panel:first-of-type { display: block; }
+    .divider {
+      display: flex; align-items: center; gap: 0.8rem;
+      margin: 1.4rem 0;
+      color: rgba(255,255,255,0.18);
+      font-size: 0.75rem;
+    }
+    .divider::before, .divider::after {
+      content: ''; flex: 1;
+      height: 1px; background: rgba(255,255,255,0.07);
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar" aria-label="Main navigation">
+    <a href="../index.html" class="nav-logo">
+      <div class="nav-logo-icon">⚡</div>
+      <span class="nav-logo-text">SILVERSTONE <span>SMART</span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="ev-parking.html">EV Parking</a></li>
+      <li><a href="charging.html">Charging</a></li>
+      <li><a href="bike-charging.html">Bike &amp; E-Bike</a></li>
+      <li><a href="travel.html">Travel &amp; Access</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="login.html" class="nav-cta active">Login</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+  </nav>
+
+  <div class="login-page">
+    <!-- Glow blobs via inline CSS -->
+    <div class="glow-blob glow-green" style="width:400px;height:400px;top:-80px;right:-80px;"></div>
+    <div class="glow-blob glow-blue"  style="width:350px;height:350px;bottom:-80px;left:-80px;"></div>
+
+    <div class="login-container">
+      <div class="login-card animate-fade-up delay-1">
+
+        <div class="login-logo">
+          <div class="login-logo-icon">⚡</div>
+          <h1>SILVERSTONE SMART</h1>
+          <p>Sign in to manage your parking &amp; charging</p>
+        </div>
+
+        <!-- TAB SWITCHER -->
+        <div class="tabs" data-targets="signInPanel,registerPanel">
+          <div class="tab active">Sign In</div>
+          <div class="tab">Register</div>
+        </div>
+
+        <!-- SIGN IN PANEL -->
+        <div class="tab-panel" id="signInPanel">
+          <div class="error-box" id="loginError"></div>
+          <form id="loginForm" novalidate>
+            <div class="form-group">
+              <label class="form-label" for="loginEmail">Email Address</label>
+              <input type="email" id="loginEmail" class="form-input" placeholder="you@example.com" required autocomplete="email">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="loginPassword">Password</label>
+              <!-- Inline CSS for password input spacing -->
+              <input type="password" id="loginPassword" class="form-input" placeholder="••••••••" required autocomplete="current-password" style="letter-spacing:0.1em;">
+            </div>
+            <div class="form-options" style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1.4rem;">
+              <label class="form-check">
+                <input type="checkbox" id="rememberMe"> Remember me
+              </label>
+              <a href="#" style="font-size:0.8rem;color:#0EA5E9;">Forgot password?</a>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">Sign In →</button>
+          </form>
+          <div class="divider">or continue with</div>
+          <button class="btn btn-outline btn-full" type="button">
+            🔑 &nbsp;Sign in with Silverstone Account
+          </button>
+          <div class="form-footer-link">
+            Don't have an account? <a href="#" onclick="document.querySelectorAll('.tab')[1].click();return false;">Register here</a>
+          </div>
+        </div>
+
+        <!-- REGISTER PANEL -->
+        <div class="tab-panel" id="registerPanel">
+          <div class="error-box" id="registerError"></div>
+          <form id="registerForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="regFirst">First Name</label>
+                <input type="text" id="regFirst" class="form-input" placeholder="Sarah" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="regLast">Last Name</label>
+                <input type="text" id="regLast" class="form-input" placeholder="Holloway" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="regEmail">Email Address</label>
+              <input type="email" id="regEmail" class="form-input" placeholder="you@example.com" required autocomplete="email">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="regPassword">Password</label>
+              <input type="password" id="regPassword" class="form-input" placeholder="Minimum 8 characters" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="regPassword2">Confirm Password</label>
+              <input type="password" id="regPassword2" class="form-input" placeholder="Repeat your password" required>
+            </div>
+            <div class="form-group">
+              <label class="form-check">
+                <input type="checkbox" id="regConsent" required>
+                I agree to the <a href="#" style="color:#0EA5E9;">Privacy Notice</a> and consent to Silverstone Smart Parking processing my data to manage my account.
+              </label>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">Create Account →</button>
+          </form>
+          <div class="form-footer-link">
+            Already have an account? <a href="#" onclick="document.querySelectorAll('.tab')[0].click();return false;">Sign in</a>
+          </div>
+        </div>
+
+        <p style="font-size:0.72rem;color:rgba(255,255,255,0.2);text-align:center;margin-top:1.5rem;margin-bottom:0;">
+          Your data is used only to manage your account. See our <a href="#" style="color:rgba(255,255,255,0.35);">Privacy Notice</a>.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== ACCOUNT BENEFITS SECTION (table + nested list + image) ===== -->
+  <section style="background:#111827;padding:3rem 2rem;border-top:1px solid rgba(255,255,255,0.06);">
+    <div style="max-width:1100px;margin:0 auto;">
+      <div class="section-label">Why Register?</div>
+      <h2 style="font-family:'DM Serif Display',serif;font-size:1.8rem;margin-bottom:0.5rem;">Account Benefits</h2>
+      <p style="color:rgba(255,255,255,0.5);margin-bottom:1.5rem;">Creating a free account unlocks the following features across the Silverstone Smart Parking platform.</p>
+
+      <!-- Image -->
+      <img src="https://images.unsplash.com/photo-1620714223084-8fcacc2dfd4d?w=1100&q=80"
+           alt="Driver using a mobile phone to manage EV charging at a car park"
+           class="img-hero animate-fade-in delay-1"
+           style="margin-bottom:0.4rem;">
+      <p style="font-size:0.7rem;color:rgba(255,255,255,0.2);margin-bottom:2rem;">Image: Unsplash — free to use under Unsplash Licence</p>
+
+      <!-- Nested list of account benefits -->
+      <ul class="nested-list" style="margin-bottom:2rem;">
+        <li>Parking Management
+          <ul>
+            <li>Pre-book Ultra-Rapid charging bays on race days</li>
+            <li>View and manage your upcoming parking sessions</li>
+            <li>Receive email reminders before your booking</li>
+          </ul>
+        </li>
+        <li>Charging History
+          <ul>
+            <li>Download itemised charging session logs</li>
+            <li>Track your kWh usage and CO₂ saved over time</li>
+          </ul>
+        </li>
+        <li>Notifications &amp; Alerts
+          <ul>
+            <li>Get live alerts when your zone nears capacity</li>
+            <li>Opt in to race-day parking updates by email or SMS</li>
+          </ul>
+        </li>
+      </ul>
+
+      <!-- Account tier comparison table (4+ cols, 4+ rows) -->
+      <div class="section-label">Account Tiers</div>
+      <h3 style="font-family:'DM Serif Display',serif;font-size:1.4rem;margin-bottom:1rem;">Free vs. Premium</h3>
+      <div class="table-wrapper">
+        <table class="styled-table" aria-label="Comparison of free and premium account features">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Guest (No Account)</th>
+              <th>Free Account</th>
+              <th>Premium (£4.99/yr)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Live Bay Availability</strong></td>
+              <td>✓ View only</td>
+              <td>✓ View + alerts</td>
+              <td>✓ View + priority alerts</td>
+            </tr>
+            <tr>
+              <td><strong>Pre-Book Ultra-Rapid Bay</strong></td>
+              <td>✗ Not available</td>
+              <td>✓ Race days only</td>
+              <td>✓ All days</td>
+            </tr>
+            <tr>
+              <td><strong>Charging Session History</strong></td>
+              <td>✗ Not available</td>
+              <td>✓ Last 12 months</td>
+              <td>✓ Full history + export</td>
+            </tr>
+            <tr>
+              <td><strong>RFID Card Discount</strong></td>
+              <td>✗ Standard rate</td>
+              <td>✗ Standard rate</td>
+              <td>✓ −£0.05/kWh discount</td>
+            </tr>
+            <tr>
+              <td><strong>Email &amp; SMS Notifications</strong></td>
+              <td>✗ Not available</td>
+              <td>✓ Email only</td>
+              <td>✓ Email + SMS</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <div class="footer-logo-text">SILVERSTONE <span>SMART</span> PARKING</div>
+        <p class="footer-desc">Real-time EV parking and charging for Silverstone visitors.</p>
+      </div>
+      <div>
+        <div class="footer-heading">Pages</div>
+        <ul class="footer-links-list">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="ev-parking.html">EV Parking</a></li>
+          <li><a href="charging.html">Charging</a></li>
+          <li><a href="bike-charging.html">Bike &amp; E-Bike</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Info</div>
+        <ul class="footer-links-list">
+          <li><a href="travel.html">Travel &amp; Access</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Legal</div>
+        <ul class="footer-links-list">
+          <li><a href="#">Privacy Notice</a></li>
+          <li><a href="#">Cookie Policy</a></li>
+          <li><a href="#">Accessibility</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Silverstone Smart Parking</span>
+      <div class="footer-bottom-links"><a href="#">Privacy</a><a href="#">Accessibility</a></div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

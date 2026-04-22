@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<!-- Silverstone Smart Parking | Travel & Accessibility Page -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Silverstone Smart Parking | Travel, Accessibility & Visitor Assistance</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <style>
+    .travel-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    .info-block {
+      background: #111827;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px;
+      padding: 1.8rem;
+    }
+    .ib-header { display: flex; align-items: center; gap: 0.8rem; margin-bottom: 1.2rem; }
+    .ib-icon   { font-size: 1.5rem; }
+    .ib-title  { font-family: 'DM Serif Display',serif; font-size: 1.2rem; }
+    @media (max-width:768px) { .travel-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar" aria-label="Main navigation">
+    <a href="../index.html" class="nav-logo">
+      <div class="nav-logo-icon">⚡</div>
+      <span class="nav-logo-text">SILVERSTONE <span>SMART</span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="ev-parking.html">EV Parking</a></li>
+      <li><a href="charging.html">Charging</a></li>
+      <li><a href="bike-charging.html">Bike &amp; E-Bike</a></li>
+      <li><a href="travel.html" class="active">Travel &amp; Access</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="login.html" class="nav-cta">Login</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+  </nav>
+
+  <div class="page-header">
+    <div class="grid-overlay"></div>
+    <div class="page-header-inner">
+      <div class="breadcrumb"><a href="../index.html">Home</a> › <span>Travel &amp; Accessibility</span></div>
+      <h1 class="page-title animate-fade-up delay-1">TRAVEL &amp; ACCESSIBILITY</h1>
+      <p class="page-subtitle animate-fade-up delay-2">Accessible routes, sustainable travel options, and visitor assistance for everyone at Silverstone.</p>
+    </div>
+  </div>
+
+  <main class="container">
+
+    <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1200&q=80"
+         alt="Accessible pathway at a large outdoor event venue"
+         class="img-hero animate-fade-in delay-1"
+         style="margin-bottom:0.4rem;">
+    <p style="font-size:0.7rem;color:rgba(255,255,255,0.2);margin-bottom:2rem;">Image: Unsplash — free to use under Unsplash Licence</p>
+
+    <div class="travel-grid" style="margin-bottom:1.5rem;">
+      <div class="info-block animate-fade-up delay-1">
+        <div class="ib-header"><div class="ib-icon">♿</div><div class="ib-title">Accessible Routes</div></div>
+        <ul class="nested-list">
+          <li>Drop-off Points
+            <ul>
+              <li>Level-access drop-off at all main entrances</li>
+              <li>Designated accessible drop-off at Gates 1 and 2</li>
+            </ul>
+          </li>
+          <li>Parking
+            <ul>
+              <li>22 accessible bays across all zones</li>
+              <li>Blue Badge required — verify at steward post on arrival</li>
+            </ul>
+          </li>
+          <li>Pathways
+            <ul>
+              <li>Hardstanding paths throughout all car parks</li>
+              <li>Steward assistance available at Gates 1, 2, and 5</li>
+              <li>Hearing loop at all information kiosks</li>
+            </ul>
+          </li>
+        </ul>
+        <a href="#" class="download-btn">⬇ Download Accessible Route Map (PDF)</a>
+      </div>
+      <div class="info-block animate-fade-up delay-2">
+        <div class="ib-header"><div class="ib-icon">🚌</div><div class="ib-title">Sustainable Travel</div></div>
+        <ul class="nested-list">
+          <li>Shuttle Bus Service
+            <ul>
+              <li>Runs from Northampton Station on all event days</li>
+              <li>Accessible coaches with ramp boarding</li>
+              <li>Free for Blue Badge holders</li>
+            </ul>
+          </li>
+          <li>Car Sharing
+            <ul>
+              <li>Designated drop-off zones at all perimeter gates</li>
+              <li>Liftshare partnership — find matches at liftshare.com</li>
+            </ul>
+          </li>
+          <li>Zero-Emission Travel
+            <ul>
+              <li>Electric shuttle buggies run circuits within grounds</li>
+              <li>Carbon offset option when booking parking online</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="info-block animate-fade-up delay-3">
+        <div class="ib-header"><div class="ib-icon">🚲</div><div class="ib-title">Cycling to Silverstone</div></div>
+        <ul class="nested-list">
+          <li>Routes
+            <ul>
+              <li>Signed cycling routes from Towcester (5 miles, largely flat)</li>
+              <li>NCN Route 70 passes within 1 mile of the circuit</li>
+            </ul>
+          </li>
+          <li>Facilities on Arrival
+            <ul>
+              <li>42 secure bike racks at Zones A and B</li>
+              <li>Covered racks and lockers near Gate 3</li>
+              <li>E-bike charging — first hour free</li>
+            </ul>
+          </li>
+        </ul>
+        <a href="bike-charging.html" class="download-btn">🗺 View Bike Charging Stations</a>
+      </div>
+      <div class="info-block animate-fade-up delay-4">
+        <div class="ib-header"><div class="ib-icon">📞</div><div class="ib-title">Visitor Assistance</div></div>
+        <ul class="nested-list">
+          <li>On-Site Support
+            <ul>
+              <li>Stewards at all car parks from 2 hours before events</li>
+              <li>Medical points marked on all maps and apps</li>
+            </ul>
+          </li>
+          <li>Sensory Support
+            <ul>
+              <li>Quiet zones available — ask at any steward post</li>
+              <li>Ear defenders and maps available at the welcome desk</li>
+            </ul>
+          </li>
+          <li>Contact
+            <ul>
+              <li>Accessibility helpline: 01327 857 200</li>
+              <li>Email: access@silverstone.co.uk</li>
+            </ul>
+          </li>
+        </ul>
+        <a href="contact.html" class="download-btn">📋 Request Special Assistance</a>
+      </div>
+    </div>
+
+    <!-- TRANSPORT TABLE -->
+    <div class="section-label">Getting Here</div>
+    <h2 class="section-title">Transport Options at a Glance</h2>
+    <div class="table-wrapper">
+      <table class="styled-table" aria-label="Transport options for visiting Silverstone Circuit">
+        <thead>
+          <tr>
+            <th>Method</th>
+            <th>Nearest Point</th>
+            <th>Accessibility</th>
+            <th>Cost (approx.)</th>
+            <th>Carbon Impact</th>
+            <th>More Info</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>EV Car</strong></td>
+            <td>All parking zones</td>
+            <td>Accessible bays available</td>
+            <td>Parking + kWh charge</td>
+            <td><span style="color:#4ade80;">● Low</span></td>
+            <td><a href="ev-parking.html" style="color:#0EA5E9;">EV Parking</a></td>
+          </tr>
+          <tr>
+            <td><strong>Petrol / Diesel Car</strong></td>
+            <td>Standard car parks</td>
+            <td>Accessible bays available</td>
+            <td>Standard parking fee</td>
+            <td><span style="color:#f87171;">● High</span></td>
+            <td>See signage at gates</td>
+          </tr>
+          <tr>
+            <td><strong>Shuttle Bus</strong></td>
+            <td>All main gates</td>
+            <td>Accessible coaches</td>
+            <td>£8 return (adults)</td>
+            <td><span style="color:#4ade80;">● Low</span></td>
+            <td>Event day service</td>
+          </tr>
+          <tr>
+            <td><strong>Cycling / E-Bike</strong></td>
+            <td>Gates 2 &amp; 3</td>
+            <td>Hardstanding paths</td>
+            <td>Free parking + charging</td>
+            <td><span style="color:#4ade80;">● Zero</span></td>
+            <td><a href="bike-charging.html" style="color:#0EA5E9;">Bike Charging</a></td>
+          </tr>
+          <tr>
+            <td><strong>Taxi / Ride Share</strong></td>
+            <td>All gates</td>
+            <td>Drop-off at Gate 1 &amp; 2</td>
+            <td>Varies</td>
+            <td><span style="color:#F59E0B;">● Medium</span></td>
+            <td>No advance booking needed</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <div class="footer-logo-text">SILVERSTONE <span>SMART</span> PARKING</div>
+        <p class="footer-desc">Real-time EV parking and charging for Silverstone visitors.</p>
+      </div>
+      <div>
+        <div class="footer-heading">Pages</div>
+        <ul class="footer-links-list">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="ev-parking.html">EV Parking</a></li>
+          <li><a href="charging.html">Charging Info</a></li>
+          <li><a href="bike-charging.html">Bike &amp; E-Bike</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Help</div>
+        <ul class="footer-links-list">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Legal</div>
+        <ul class="footer-links-list">
+          <li><a href="#">Privacy Notice</a></li>
+          <li><a href="#">Cookie Policy</a></li>
+          <li><a href="#">Accessibility</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Silverstone Smart Parking</span>
+      <div class="footer-bottom-links"><a href="#">Privacy</a><a href="#">Accessibility</a></div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

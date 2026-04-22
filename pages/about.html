@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<!-- Silverstone Smart Parking | About Us Page -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Silverstone Smart Parking | About Us — Our Mission & Team</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <style>
+    .about-hero {
+      background: linear-gradient(135deg, #0d1520 0%, #0B1F2E 50%, #0e1a10 100%);
+      padding: 4rem 2rem;
+    }
+    .about-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    .about-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    .as-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 14px;
+      padding: 1.4rem;
+      text-align: center;
+    }
+    .as-num { font-family: 'Bebas Neue',sans-serif; font-size: 2.6rem; color: #0EA5E9; line-height: 1; }
+    .as-lbl { font-size: 0.78rem; color: rgba(255,255,255,0.35); margin-top: 0.2rem; }
+    .team-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.2rem; }
+    .team-card {
+      background: #1F2937;
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 16px;
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.25s;
+    }
+    .team-card:hover { transform: translateY(-3px); }
+    .team-card img { width: 100%; height: 180px; object-fit: cover; }
+    .team-card-body { padding: 1.2rem; }
+    .team-name { font-weight: 700; margin-bottom: 0.2rem; }
+    .team-role { font-size: 0.78rem; color: rgba(255,255,255,0.35); margin-bottom: 0; }
+    @media (max-width:768px) {
+      .about-content { grid-template-columns: 1fr; gap: 2rem; }
+      .team-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width:480px) { .team-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar" aria-label="Main navigation">
+    <a href="../index.html" class="nav-logo">
+      <div class="nav-logo-icon">⚡</div>
+      <span class="nav-logo-text">SILVERSTONE <span>SMART</span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="ev-parking.html">EV Parking</a></li>
+      <li><a href="charging.html">Charging</a></li>
+      <li><a href="bike-charging.html">Bike &amp; E-Bike</a></li>
+      <li><a href="travel.html">Travel &amp; Access</a></li>
+      <li><a href="about.html" class="active">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="login.html" class="nav-cta">Login</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+  </nav>
+
+  <div class="page-header">
+    <div class="grid-overlay"></div>
+    <div class="page-header-inner">
+      <div class="breadcrumb"><a href="../index.html">Home</a> › <span>About Us</span></div>
+      <h1 class="page-title animate-fade-up delay-1">ABOUT US</h1>
+      <p class="page-subtitle animate-fade-up delay-2">The team behind Silverstone Smart Parking — and the mission that drives us.</p>
+    </div>
+  </div>
+
+  <!-- ABOUT HERO -->
+  <section class="about-hero">
+    <div class="about-content">
+      <div class="animate-slide-in delay-1">
+        <div class="section-label">Our Story</div>
+        <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(2.5rem,5vw,3.8rem);line-height:1;margin-bottom:1.2rem;">
+          SMART PARKING<br><span style="color:#0EA5E9;">FOR THE FUTURE</span>
+        </h2>
+        <p>Silverstone Smart Parking was developed to meet the growing demand for EV infrastructure at one of the world's most iconic motorsport venues. As Formula 1 and the wider industry transition towards electric and sustainable technology, we're ensuring the visitor experience matches that ambition.</p>
+        <p>Our platform gives every driver — arriving by EV, bike, or bus — real-time information about parking availability, charger status, and accessible routes, all before they leave home.</p>
+        <a href="contact.html" class="btn btn-primary" style="margin-top:0.5rem;">Get in Touch</a>
+      </div>
+      <div class="about-stats animate-fade-up delay-2">
+        <div class="as-card"><div class="as-num">320</div><div class="as-lbl">EV Parking Bays</div></div>
+        <div class="as-card"><div class="as-num">50+</div><div class="as-lbl">Charging Points</div></div>
+        <div class="as-card"><div class="as-num">42</div><div class="as-lbl">Bike Stations</div></div>
+        <div class="as-card"><div class="as-num">100%</div><div class="as-lbl">Renewable Energy</div></div>
+      </div>
+    </div>
+  </section>
+
+  <main class="container">
+
+    <!-- MISSION IMAGE -->
+    <img src="https://images.unsplash.com/photo-1562184552-997c461abbe6?w=1200&q=80"
+         alt="Silverstone Circuit from the air showing the iconic race track layout"
+         class="img-hero animate-fade-in delay-1"
+         style="margin-bottom:0.4rem;">
+    <p style="font-size:0.7rem;color:rgba(255,255,255,0.2);margin-bottom:2.5rem;">Image: Unsplash — free to use under Unsplash Licence</p>
+
+    <!-- OUR VALUES -->
+    <div class="section-label">Values</div>
+    <h2 class="section-title">What We Stand For</h2>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:3rem;">
+      <div class="card animate-fade-up delay-1" style="border-top:3px solid #0B6E4F;">
+        <div style="font-size:2rem;margin-bottom:0.8rem;">🌿</div>
+        <h3 style="font-family:'DM Serif Display',serif;font-size:1.1rem;margin-bottom:0.5rem;">Sustainability</h3>
+        <p style="font-size:0.85rem;">All energy powering our chargers comes from renewable sources. We're committed to Silverstone's net-zero 2030 roadmap.</p>
+      </div>
+      <div class="card animate-fade-up delay-2" style="border-top:3px solid #0EA5E9;">
+        <div style="font-size:2rem;margin-bottom:0.8rem;">♿</div>
+        <h3 style="font-family:'DM Serif Display',serif;font-size:1.1rem;margin-bottom:0.5rem;">Inclusivity</h3>
+        <p style="font-size:0.85rem;">Every feature of this site is designed with WCAG 2.2 AA accessibility standards in mind. Motorsport is for everyone.</p>
+      </div>
+      <div class="card animate-fade-up delay-3" style="border-top:3px solid #F59E0B;">
+        <div style="font-size:2rem;margin-bottom:0.8rem;">⚡</div>
+        <h3 style="font-family:'DM Serif Display',serif;font-size:1.1rem;margin-bottom:0.5rem;">Innovation</h3>
+        <p style="font-size:0.85rem;">From live bay counters to IoT charger monitoring, we use emerging technology to make every visit smarter and smoother.</p>
+      </div>
+    </div>
+
+    <!-- TEAM -->
+    <div class="section-label">The Team</div>
+    <h2 class="section-title">People Behind the Platform</h2>
+    <div class="team-grid">
+      <div class="team-card animate-fade-up delay-1">
+        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=70"
+             alt="Portrait of Sarah Holloway, Head of Smart Infrastructure">
+        <div class="team-card-body">
+          <div class="team-name">Sarah Holloway</div>
+          <div class="team-role">Head of Smart Infrastructure</div>
+        </div>
+      </div>
+      <div class="team-card animate-fade-up delay-2">
+        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=70"
+             alt="Portrait of Marcus Reid, EV Systems Engineer">
+        <div class="team-card-body">
+          <div class="team-name">Marcus Reid</div>
+          <div class="team-role">EV Systems Engineer</div>
+        </div>
+      </div>
+      <div class="team-card animate-fade-up delay-3">
+        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=70"
+             alt="Portrait of Priya Nair, Visitor Experience Lead">
+        <div class="team-card-body">
+          <div class="team-name">Priya Nair</div>
+          <div class="team-role">Visitor Experience Lead</div>
+        </div>
+      </div>
+    </div>
+
+    <p style="font-size:0.7rem;color:rgba(255,255,255,0.2);margin-top:0.5rem;">Team portrait images: Unsplash — free to use under Unsplash Licence</p>
+
+    <!-- TECHNOLOGY SECTION with nested list -->
+    <div style="margin-top:3rem;display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start;">
+      <div>
+        <div class="section-label">Technology</div>
+        <h2 class="section-title">How It Works</h2>
+        <p>Silverstone Smart Parking uses IoT sensors embedded in each parking bay to detect occupancy in real time. This data is pushed to our platform via a low-power wireless network and displayed live on this website.</p>
+        <ul class="nested-list">
+          <li>Bay Sensors
+            <ul>
+              <li>Magnetic field sensors detect vehicle presence</li>
+              <li>Data updated every 30 seconds</li>
+              <li>Battery-powered — 5-year lifespan per unit</li>
+            </ul>
+          </li>
+          <li>Charger Monitoring
+            <ul>
+              <li>OCPP 2.0 protocol for all networked chargers</li>
+              <li>Real-time fault detection and alert system</li>
+            </ul>
+          </li>
+          <li>Platform
+            <ul>
+              <li>Built with HTML5, CSS3 and JavaScript</li>
+              <li>Hosted on Netlify with automatic SSL</li>
+              <li>WCAG 2.2 AA compliant throughout</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="card" style="background:#111827;">
+        <div class="section-label">Our Partners</div>
+        <div class="table-wrapper" style="margin:0.5rem 0 0;">
+          <table class="styled-table" aria-label="Technology and infrastructure partners">
+            <thead>
+              <tr><th>Partner</th><th>Role</th><th>Since</th><th>Category</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>Osprey Charging</strong></td><td>EV Charging Network</td><td>2022</td><td>Infrastructure</td></tr>
+              <tr><td><strong>Netlify</strong></td><td>Web Hosting &amp; Deployment</td><td>2024</td><td>Technology</td></tr>
+              <tr><td><strong>Liftshare</strong></td><td>Car Share Platform</td><td>2023</td><td>Sustainability</td></tr>
+              <tr><td><strong>RNIB</strong></td><td>Accessibility Guidance</td><td>2024</td><td>Inclusion</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <div class="footer-logo-text">SILVERSTONE <span>SMART</span> PARKING</div>
+        <p class="footer-desc">Real-time EV parking and charging for Silverstone visitors.</p>
+      </div>
+      <div>
+        <div class="footer-heading">Pages</div>
+        <ul class="footer-links-list">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="ev-parking.html">EV Parking</a></li>
+          <li><a href="charging.html">Charging Info</a></li>
+          <li><a href="bike-charging.html">Bike &amp; E-Bike</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Help</div>
+        <ul class="footer-links-list">
+          <li><a href="travel.html">Travel &amp; Access</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Legal</div>
+        <ul class="footer-links-list">
+          <li><a href="#">Privacy Notice</a></li>
+          <li><a href="#">Cookie Policy</a></li>
+          <li><a href="#">Accessibility</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Silverstone Smart Parking</span>
+      <div class="footer-bottom-links"><a href="#">Privacy</a><a href="#">Accessibility</a></div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<!-- Silverstone Smart Parking | Charging Information Page -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Silverstone Smart Parking | EV Charging Information & Availability</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <style>
+    .charger-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.2rem; margin-bottom: 3rem; }
+    .charger-speed{ font-size: 2.2rem; font-weight: 800; margin-bottom: 0.3rem; }
+    .charger-desc { font-size: 0.82rem; color: rgba(255,255,255,0.45); line-height: 1.6; margin-bottom: 1rem; }
+    .avail-row    { display: flex; align-items: center; gap: 0.5rem; font-size: 0.82rem; color: #4ade80; }
+    @media (max-width:768px) { .charger-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar" aria-label="Main navigation">
+    <a href="../index.html" class="nav-logo">
+      <div class="nav-logo-icon">⚡</div>
+      <span class="nav-logo-text">SILVERSTONE <span>SMART</span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="ev-parking.html">EV Parking</a></li>
+      <li><a href="charging.html" class="active">Charging</a></li>
+      <li><a href="bike-charging.html">Bike &amp; E-Bike</a></li>
+      <li><a href="travel.html">Travel &amp; Access</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="login.html" class="nav-cta">Login</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+  </nav>
+
+  <div class="page-header">
+    <div class="grid-overlay"></div>
+    <div class="page-header-inner">
+      <div class="breadcrumb"><a href="../index.html">Home</a> › <span>Charging Information</span></div>
+      <h1 class="page-title animate-fade-up delay-1">CHARGING INFORMATION</h1>
+      <p class="page-subtitle animate-fade-up delay-2">Charger types, live status, pricing, and safety guidance — everything you need before you plug in.</p>
+    </div>
+  </div>
+
+  <main class="container">
+
+    <!-- HERO IMAGE -->
+    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80"
+         alt="Row of electric vehicle charging stations in a car park at night"
+         class="img-hero animate-fade-in delay-1"
+         style="margin-bottom:0.4rem;">
+    <p style="font-size:0.7rem;color:rgba(255,255,255,0.2);margin-bottom:2rem;">Image: Unsplash — free to use under Unsplash Licence</p>
+
+    <!-- CHARGER TYPE CARDS -->
+    <div class="section-label">Charger Types</div>
+    <h2 class="section-title">Available Charging Options</h2>
+    <div class="charger-grid">
+      <div class="charger-card cc-blue animate-fade-up delay-1">
+        <div style="font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:rgba(255,255,255,0.35);margin-bottom:0.4rem;">Type 2 · AC Standard</div>
+        <h3 style="font-family:'DM Serif Display',serif;font-size:1.3rem;margin-bottom:0.5rem;">Standard Charger</h3>
+        <div class="charger-speed" style="color:#0EA5E9;">7 kW</div>
+        <p class="charger-desc">Ideal for longer stays. Compatible with all standard EVs using a Type 2 connector. Available in Zones Alpha, Beta, and Gamma.</p>
+        <div class="avail-row"><span class="avail-dot"></span> <span data-live-count="24" data-range="4">24</span> of 30 available</div>
+      </div>
+      <div class="charger-card cc-green animate-fade-up delay-2">
+        <div style="font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:rgba(255,255,255,0.35);margin-bottom:0.4rem;">CCS · DC Rapid</div>
+        <h3 style="font-family:'DM Serif Display',serif;font-size:1.3rem;margin-bottom:0.5rem;">Rapid Charger</h3>
+        <div class="charger-speed" style="color:#4ade80;">50 kW</div>
+        <p class="charger-desc">Adds up to 100 miles in 30 minutes. CCS and CHAdeMO connectors provided. Located at Zones Alpha and Beta.</p>
+        <div class="avail-row"><span class="avail-dot"></span> <span data-live-count="10" data-range="3">10</span> of 12 available</div>
+      </div>
+      <div class="charger-card cc-amber animate-fade-up delay-3">
+        <div style="font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:rgba(255,255,255,0.35);margin-bottom:0.4rem;">CCS · Ultra DC</div>
+        <h3 style="font-family:'DM Serif Display',serif;font-size:1.3rem;margin-bottom:0.5rem;">Ultra-Rapid Charger</h3>
+        <div class="charger-speed" style="color:#F59E0B;">150 kW</div>
+        <p class="charger-desc">Premium fast charging for compatible vehicles. Zone Delta only. Pre-booking strongly recommended on race days.</p>
+        <div class="avail-row"><span class="avail-dot amber"></span> <span data-live-count="4" data-range="2">4</span> of 6 available</div>
+      </div>
+    </div>
+
+    <!-- PRICING TABLE (4+ columns, 4+ rows) -->
+    <div class="section-label">Pricing</div>
+    <h2 class="section-title">Charging Tariffs</h2>
+    <div class="table-wrapper">
+      <table class="styled-table" aria-label="Charging tariff information by charger type">
+        <thead>
+          <tr>
+            <th>Charger Type</th>
+            <th>Speed</th>
+            <th>Price per kWh</th>
+            <th>Connection Fee</th>
+            <th>Idle Fee (after full)</th>
+            <th>Network</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Standard</strong> — Type 2 AC</td>
+            <td>7 kW</td>
+            <td>£0.44 / kWh</td>
+            <td>None</td>
+            <td>£0.10 / min</td>
+            <td>Osprey Network</td>
+          </tr>
+          <tr>
+            <td><strong>Rapid</strong> — CCS DC</td>
+            <td>50 kW</td>
+            <td>£0.59 / kWh</td>
+            <td>None</td>
+            <td>£0.20 / min</td>
+            <td>Osprey Network</td>
+          </tr>
+          <tr>
+            <td><strong>Ultra-Rapid</strong> — CCS DC</td>
+            <td>150 kW</td>
+            <td>£0.79 / kWh</td>
+            <td>£1.00</td>
+            <td>£0.40 / min</td>
+            <td>Osprey Network</td>
+          </tr>
+          <tr>
+            <td><strong>CHAdeMO</strong> — DC</td>
+            <td>50 kW</td>
+            <td>£0.59 / kWh</td>
+            <td>None</td>
+            <td>£0.20 / min</td>
+            <td>Osprey Network</td>
+          </tr>
+          <tr>
+            <td><strong>RFID Card Discount</strong></td>
+            <td>All</td>
+            <td>−£0.05 / kWh</td>
+            <td>Waived</td>
+            <td>Standard applies</td>
+            <td>Osprey Members</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- CONNECTOR GUIDE nested list -->
+    <div class="section-label" style="margin-top:2rem;">Connector Guide</div>
+    <h2 class="section-title">Which Connector Do I Need?</h2>
+    <ul class="nested-list" style="margin-bottom:2.5rem;max-width:800px;">
+      <li>AC Charging (Slow &amp; Standard)
+        <ul>
+          <li><strong>Type 2 (Mennekes)</strong> — universal connector for all modern EVs in Europe, including Tesla</li>
+          <li><strong>3-pin plug</strong> — domestic socket; not recommended for regular use</li>
+        </ul>
+      </li>
+      <li>DC Fast Charging
+        <ul>
+          <li><strong>CCS (Combined Charging System)</strong> — standard for most European EVs; supports up to 150 kW</li>
+          <li><strong>CHAdeMO</strong> — older standard used by some Nissan and Mitsubishi models</li>
+        </ul>
+      </li>
+      <li>Tesla Vehicles
+        <ul>
+          <li>Use Type 2 AC chargers natively — no adapter needed</li>
+          <li>CCS adapters are available on loan from the on-site information kiosk</li>
+        </ul>
+      </li>
+    </ul>
+
+    <!-- FAQ -->
+    <div class="section-label" style="margin-top:2rem;">FAQ</div>
+    <h2 class="section-title">Frequently Asked Questions</h2>
+    <div class="faq-list" style="max-width:800px;">
+      <div class="faq-item">
+        <div class="faq-question">Do I need to pre-book a charging bay? <em class="faq-icon">+</em></div>
+        <div class="faq-answer">Pre-booking is only required for Ultra-Rapid chargers in Zone Delta on race days. All other chargers operate on a first-come, first-served basis.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">What payment methods are accepted? <em class="faq-icon">+</em></div>
+        <div class="faq-answer">All chargers accept contactless card payment. RFID charging cards (Osprey network) are also accepted and give a small per-kWh discount.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Is charging included in the parking fee? <em class="faq-icon">+</em></div>
+        <div class="faq-answer">No. Charging is billed separately on a per-kWh basis. Parking fees (where applicable) are handled at the gate kiosk.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">What do I do if a charger is faulty? <em class="faq-icon">+</em></div>
+        <div class="faq-answer">Call our support line on 01327 857 271 or report it via the Contact page. A qualified engineer is on site on all event days and most weekdays.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Can I use a Tesla vehicle at these chargers? <em class="faq-icon">+</em></div>
+        <div class="faq-answer">Yes. Tesla vehicles can use CCS chargers with a CCS adapter, which is available from the on-site information kiosk as a loan item. Type 2 AC chargers are natively compatible with Tesla.</div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <div class="footer-logo-text">SILVERSTONE <span>SMART</span> PARKING</div>
+        <p class="footer-desc">Real-time EV parking and charging for Silverstone visitors.</p>
+      </div>
+      <div>
+        <div class="footer-heading">Pages</div>
+        <ul class="footer-links-list">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="ev-parking.html">EV Parking</a></li>
+          <li><a href="bike-charging.html">Bike &amp; E-Bike</a></li>
+          <li><a href="travel.html">Travel &amp; Access</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Help</div>
+        <ul class="footer-links-list">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Legal</div>
+        <ul class="footer-links-list">
+          <li><a href="#">Privacy Notice</a></li>
+          <li><a href="#">Cookie Policy</a></li>
+          <li><a href="#">Accessibility</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Silverstone Smart Parking</span>
+      <div class="footer-bottom-links"><a href="#">Privacy</a><a href="#">Accessibility</a></div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

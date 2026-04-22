@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<!-- Silverstone Smart Parking | EV Parking Page -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Silverstone Smart Parking | EV Parking Zones & Bay Map</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <!-- Internal CSS for this page -->
+  <style>
+    .zones-grid {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 1.2rem;
+      margin-bottom: 3rem;
+    }
+    .zone-card {
+      background: #111827;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px;
+      padding: 1.5rem;
+      transition: transform 0.25s, border-color 0.25s;
+    }
+    .zone-card:hover { transform: translateY(-3px); border-color: rgba(14,165,233,0.3); }
+    .zone-name  { font-family: 'DM Serif Display',serif; font-size: 1.3rem; margin-bottom: 0.3rem; }
+    .zone-detail{ font-size: 0.82rem; color: rgba(255,255,255,0.4); margin-bottom: 0; }
+    .zone-header{ display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem; }
+    .zone-stats { display: flex; gap: 1.5rem; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.06); }
+    .zs-item label { font-size: 0.68rem; color: rgba(255,255,255,0.3); display: block; margin-bottom: 0.2rem; text-transform: uppercase; letter-spacing: 0.05em; }
+    .zs-item span  { font-size: 1.15rem; font-weight: 700; }
+    .rules-box {
+      background: rgba(14,165,233,0.06);
+      border: 1px solid rgba(14,165,233,0.18);
+      border-radius: 14px;
+      padding: 1.8rem;
+      margin-bottom: 2rem;
+    }
+    @media (max-width:768px) { .zones-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar" aria-label="Main navigation">
+    <a href="../index.html" class="nav-logo">
+      <div class="nav-logo-icon">⚡</div>
+      <span class="nav-logo-text">SILVERSTONE <span>SMART</span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="ev-parking.html" class="active">EV Parking</a></li>
+      <li><a href="charging.html">Charging</a></li>
+      <li><a href="bike-charging.html">Bike &amp; E-Bike</a></li>
+      <li><a href="travel.html">Travel &amp; Access</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="login.html" class="nav-cta">Login</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+  </nav>
+
+  <div class="page-header">
+    <div class="grid-overlay"></div>
+    <div class="page-header-inner">
+      <div class="breadcrumb"><a href="../index.html">Home</a> › <span>EV Parking</span></div>
+      <h1 class="page-title animate-fade-up delay-1">EV PARKING ZONES</h1>
+      <p class="page-subtitle animate-fade-up delay-2">All EV-only bays are signed and monitored. Find your zone before you arrive and check live availability.</p>
+    </div>
+  </div>
+
+  <main class="container">
+
+    <!-- MAP -->
+    <div class="map-box animate-fade-in delay-1">
+      <img src="https://images.unsplash.com/photo-1506521781263-d8422e82f27a?w=1200&q=80"
+           alt="Aerial map of Silverstone Circuit car parking areas"
+           style="width:100%;height:100%;object-fit:cover;opacity:0.35;border-radius:20px;">
+      <div class="map-pin pin-alpha">α</div>
+      <div class="map-pin pin-beta">β</div>
+      <div class="map-pin pin-gamma">γ</div>
+      <div class="map-pin pin-delta">δ</div>
+      <div class="map-legend">
+        <div class="legend-item"><div class="legend-dot" style="background:#0B6E4F;"></div> Alpha</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#0EA5E9;"></div> Beta</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#F59E0B;"></div> Gamma</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#9333ea;"></div> Delta</div>
+      </div>
+    </div>
+    <p style="font-size:0.7rem;color:rgba(255,255,255,0.2);margin-bottom:2rem;">Image: Unsplash — free to use under Unsplash Licence</p>
+
+    <!-- ZONE CARDS -->
+    <div class="section-label">Parking Zones</div>
+    <h2 class="section-title">Choose Your Zone</h2>
+    <div class="zones-grid">
+      <div class="zone-card animate-fade-up delay-1">
+        <div class="zone-header">
+          <div><div class="zone-name">Zone Alpha</div><p class="zone-detail">Main Entrance · Gate 2</p></div>
+          <span class="badge badge-green">Available</span>
+        </div>
+        <p style="font-size:0.85rem;color:rgba(255,255,255,0.5);">Closest zone to the main entrance. EV-only bays with Type 2 and CCS rapid chargers. Accessible bays available.</p>
+        <div class="zone-stats">
+          <div class="zs-item"><label>Total Bays</label><span>80</span></div>
+          <div class="zs-item"><label>Free Now</label><span style="color:#4ade80;" data-live-count="62" data-range="8">62</span></div>
+          <div class="zs-item"><label>Chargers</label><span style="color:#0EA5E9;">8</span></div>
+        </div>
+      </div>
+      <div class="zone-card animate-fade-up delay-2">
+        <div class="zone-header">
+          <div><div class="zone-name">Zone Beta</div><p class="zone-detail">South Car Park · Gate 5</p></div>
+          <span class="badge badge-amber">Limited</span>
+        </div>
+        <p style="font-size:0.85rem;color:rgba(255,255,255,0.5);">Large zone suitable for coaches and large vehicles. 50kW rapid chargers. Shuttle bus stop adjacent.</p>
+        <div class="zone-stats">
+          <div class="zs-item"><label>Total Bays</label><span>120</span></div>
+          <div class="zs-item"><label>Free Now</label><span style="color:#F59E0B;" data-live-count="14" data-range="5">14</span></div>
+          <div class="zs-item"><label>Chargers</label><span style="color:#0EA5E9;">12</span></div>
+        </div>
+      </div>
+      <div class="zone-card animate-fade-up delay-3">
+        <div class="zone-header">
+          <div><div class="zone-name">Zone Gamma</div><p class="zone-detail">East Overflow · Gate 7</p></div>
+          <span class="badge badge-green">Available</span>
+        </div>
+        <p style="font-size:0.85rem;color:rgba(255,255,255,0.5);">Overflow zone, ideal for arrivals from the A43. Standard 7kW chargers. Short walk to east grandstand.</p>
+        <div class="zone-stats">
+          <div class="zs-item"><label>Total Bays</label><span>60</span></div>
+          <div class="zs-item"><label>Free Now</label><span style="color:#4ade80;" data-live-count="55" data-range="6">55</span></div>
+          <div class="zs-item"><label>Chargers</label><span style="color:#0EA5E9;">6</span></div>
+        </div>
+      </div>
+      <div class="zone-card animate-fade-up delay-1">
+        <div class="zone-header">
+          <div><div class="zone-name">Zone Delta</div><p class="zone-detail">Premium North · Gate 1</p></div>
+          <span class="badge badge-red">Full</span>
+        </div>
+        <p style="font-size:0.85rem;color:rgba(255,255,255,0.5);">Premium zone with 150kW ultra-rapid chargers. Pre-booking required. Priority access holders only on race days.</p>
+        <div class="zone-stats">
+          <div class="zs-item"><label>Total Bays</label><span>60</span></div>
+          <div class="zs-item"><label>Free Now</label><span style="color:#f87171;" data-live-count="0" data-range="2">0</span></div>
+          <div class="zs-item"><label>Chargers</label><span style="color:#0EA5E9;">6</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ARRIVAL RULES TABLE -->
+    <div class="section-label">Entry Rules</div>
+    <h2 class="section-title">EV Bay Arrival Guidance</h2>
+    <div class="table-wrapper">
+      <table class="styled-table" aria-label="EV parking arrival rules by zone">
+        <thead>
+          <tr>
+            <th>Zone</th>
+            <th>Charger Type</th>
+            <th>Max Stay</th>
+            <th>Pre-Booking</th>
+            <th>Accessible Bays</th>
+            <th>Gate Entry</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Alpha</strong></td>
+            <td>Type 2 (7kW) &amp; CCS (50kW)</td>
+            <td>8 hours</td>
+            <td><span class="badge badge-green">Optional</span></td>
+            <td>6 bays</td>
+            <td>Gate 2</td>
+          </tr>
+          <tr>
+            <td><strong>Beta</strong></td>
+            <td>CCS Rapid (50kW)</td>
+            <td>12 hours</td>
+            <td><span class="badge badge-green">Optional</span></td>
+            <td>8 bays</td>
+            <td>Gate 5</td>
+          </tr>
+          <tr>
+            <td><strong>Gamma</strong></td>
+            <td>Type 2 Standard (7kW)</td>
+            <td>6 hours</td>
+            <td><span class="badge badge-green">Walk-in</span></td>
+            <td>4 bays</td>
+            <td>Gate 7</td>
+          </tr>
+          <tr>
+            <td><strong>Delta</strong></td>
+            <td>Ultra-Rapid CCS (150kW)</td>
+            <td>4 hours</td>
+            <td><span class="badge badge-amber">Required</span></td>
+            <td>4 bays</td>
+            <td>Gate 1</td>
+          </tr>
+          <tr>
+            <td><strong>All Zones</strong></td>
+            <td>CHAdeMO available</td>
+            <td>Varies</td>
+            <td>—</td>
+            <td>22 total</td>
+            <td>Any gate</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- RULES BOX with Nested List -->
+    <div class="rules-box animate-fade-up delay-1">
+      <h3 style="font-family:'DM Serif Display',serif;font-size:1.3rem;margin-bottom:1rem;">📋 EV Bay Rules</h3>
+      <ul class="nested-list">
+        <li>Eligibility
+          <ul>
+            <li>EV bays are for plug-in electric and hybrid vehicles only</li>
+            <li>Petrol or diesel vehicles will be issued a penalty notice</li>
+          </ul>
+        </li>
+        <li>Charging Etiquette
+          <ul>
+            <li>Move your vehicle once charging is complete</li>
+            <li>Do not unplug another vehicle's connector</li>
+            <li>Report faulty units to the helpline: 01327 857 271</li>
+          </ul>
+        </li>
+        <li>Safety
+          <ul>
+            <li>Keep charging cables tidy — do not leave across walkways</li>
+            <li>In an emergency, press the red stop button on the charger unit</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <div class="footer-logo-text">SILVERSTONE <span>SMART</span> PARKING</div>
+        <p class="footer-desc">Real-time EV parking and charging for Silverstone visitors.</p>
+      </div>
+      <div>
+        <div class="footer-heading">Pages</div>
+        <ul class="footer-links-list">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="charging.html">Charging Info</a></li>
+          <li><a href="bike-charging.html">Bike &amp; E-Bike</a></li>
+          <li><a href="travel.html">Travel &amp; Access</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Help</div>
+        <ul class="footer-links-list">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Legal</div>
+        <ul class="footer-links-list">
+          <li><a href="#">Privacy Notice</a></li>
+          <li><a href="#">Cookie Policy</a></li>
+          <li><a href="#">Accessibility</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Silverstone Smart Parking</span>
+      <div class="footer-bottom-links"><a href="#">Privacy</a><a href="#">Accessibility</a></div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

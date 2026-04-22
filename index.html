@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<!-- Silverstone Smart Parking | Home Page -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- TITLE: identifies both the website and the topic of the page -->
+  <title>Silverstone Smart Parking | Welcome — EV & Sustainable Parking</title>
+  <!-- External CSS (Google Fonts) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <!-- External CSS stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Internal CSS: hero-specific overrides -->
+  <style>
+    /* Internal CSS — hero section only */
+    .hero {
+      min-height: calc(100vh - 64px);
+      background: linear-gradient(135deg, #0d1520 0%, #0B1F2E 45%, #0B2E1F 100%);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+    }
+    .hero-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(11,110,79,0.18);
+      border: 1px solid rgba(11,110,79,0.35);
+      border-radius: 100px;
+      padding: 0.3rem 1rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #4ade80;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      margin-bottom: 1.4rem;
+    }
+    .hero-title {
+      font-size: clamp(3.2rem, 6vw, 5.8rem);
+      line-height: 0.95;
+      margin-bottom: 1.5rem;
+    }
+    .hero-title .accent  { color: #0EA5E9; }
+    .hero-title .accent2 { color: #F59E0B; }
+    .hero-desc {
+      color: rgba(255,255,255,0.6);
+      font-size: 1.05rem;
+      line-height: 1.75;
+      margin-bottom: 2.5rem;
+      max-width: 460px;
+    }
+    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .hero-visual  { display: flex; flex-direction: column; gap: 1rem; }
+    .ql-grid {
+      background: #111827;
+      padding: 3rem 2rem;
+    }
+    .ql-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      gap: 1rem;
+    }
+    .ql-card {
+      background: #1F2937;
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 14px;
+      padding: 1.4rem;
+      cursor: pointer;
+      transition: all 0.25s;
+      text-align: center;
+      text-decoration: none;
+      display: block;
+    }
+    .ql-card:hover { border-color: #0EA5E9; transform: translateY(-3px); }
+    .ql-icon  { font-size: 2rem; margin-bottom: 0.6rem; }
+    .ql-title { font-weight: 700; font-size: 0.9rem; color: #fff; margin-bottom: 0.3rem; }
+    .ql-desc  { font-size: 0.78rem; color: rgba(255,255,255,0.4); margin-bottom: 0; }
+    @media (max-width:768px) {
+      .hero-inner { grid-template-columns: 1fr; gap: 2rem; }
+      .hero-visual { display: none; }
+      .ql-inner { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="navbar" aria-label="Main navigation">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-icon">⚡</div>
+      <span class="nav-logo-text">SILVERSTONE <span>SMART</span></span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="pages/ev-parking.html">EV Parking</a></li>
+      <li><a href="pages/charging.html">Charging</a></li>
+      <li><a href="pages/bike-charging.html">Bike &amp; E-Bike</a></li>
+      <li><a href="pages/travel.html">Travel &amp; Access</a></li>
+      <li><a href="pages/about.html">About Us</a></li>
+      <li><a href="pages/contact.html">Contact</a></li>
+      <li><a href="pages/login.html" class="nav-cta">Login</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ===== NOTICE BAR ===== -->
+  <div class="notice-bar" role="alert">
+    <span class="notice-badge">Race Day</span>
+    <span>📅 British Grand Prix 2025 — EV Zone Alpha pre-booking is now open. Spaces are limited. <strong style="color:#F59E0B;">Book early →</strong></span>
+  </div>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero" aria-labelledby="heroHeading">
+    <div class="grid-overlay"></div>
+    <!-- Inline CSS for glow blob positions -->
+    <div class="glow-blob glow-green" style="width:500px;height:500px;top:-100px;right:150px;"></div>
+    <div class="glow-blob glow-blue"  style="width:400px;height:400px;bottom:-100px;left:50px;"></div>
+
+    <div class="hero-inner">
+      <div class="hero-left animate-fade-up delay-1">
+        <div class="hero-eyebrow">🌿 Sustainable Motorsport Parking</div>
+        <h1 class="hero-title" id="heroHeading">
+          SMART <span class="accent">PARKING</span><br>
+          FOR THE<br>
+          <span class="accent2">ELECTRIC</span> ERA
+        </h1>
+        <p class="hero-desc">
+          Find EV charging bays, bike racks, and accessible facilities at Silverstone Circuit — all before you leave home. Real-time availability. Zero hassle.
+        </p>
+        <div class="hero-actions">
+          <a href="pages/ev-parking.html" class="btn btn-primary">⚡ Find EV Parking</a>
+          <a href="pages/charging.html"   class="btn btn-outline">View Chargers</a>
+        </div>
+      </div>
+
+      <!-- Live stat cards -->
+      <div class="hero-visual animate-fade-up delay-2">
+        <div class="stat-card">
+          <div class="stat-icon si-green">🔌</div>
+          <div>
+            <div class="stat-label">Available EV Bays</div>
+            <div class="stat-value" style="color:#4ade80;">
+              <span data-live-count="247" data-range="6">247</span>
+              <span style="font-size:0.9rem;color:rgba(255,255,255,0.35);"> of 320</span>
+            </div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon si-blue">⚡</div>
+          <div>
+            <div class="stat-label">Fast Chargers Online</div>
+            <div class="stat-value" style="color:#0EA5E9;">
+              <span data-live-count="18" data-range="3">18</span>
+              <span style="font-size:0.9rem;color:rgba(255,255,255,0.35);"> active</span>
+            </div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon si-amber">🚲</div>
+          <div>
+            <div class="stat-label">Bike Charging Points</div>
+            <div class="stat-value" style="color:#F59E0B;">
+              42 <span style="font-size:0.9rem;color:rgba(255,255,255,0.35);">stations</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== QUICK LINKS ===== -->
+  <section class="ql-grid" aria-label="Quick navigation links">
+    <div class="ql-inner">
+      <a href="pages/ev-parking.html"    class="ql-card animate-fade-up delay-1">
+        <div class="ql-icon">🅿️</div>
+        <div class="ql-title">EV Parking Map</div>
+        <div class="ql-desc">Find your zone before arrival</div>
+      </a>
+      <a href="pages/charging.html"      class="ql-card animate-fade-up delay-2">
+        <div class="ql-icon">⚡</div>
+        <div class="ql-title">Charger Status</div>
+        <div class="ql-desc">Live availability info</div>
+      </a>
+      <a href="pages/travel.html"        class="ql-card animate-fade-up delay-3">
+        <div class="ql-icon">♿</div>
+        <div class="ql-title">Accessibility</div>
+        <div class="ql-desc">Inclusive routes &amp; support</div>
+      </a>
+      <a href="pages/contact.html"       class="ql-card animate-fade-up delay-4">
+        <div class="ql-icon">💬</div>
+        <div class="ql-title">Get Help</div>
+        <div class="ql-desc">Contact our support team</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT SNIPPET ===== -->
+  <section style="background:#1F2937;padding:4rem 2rem;">
+    <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;">
+      <div class="animate-slide-in delay-1">
+        <div class="section-label">Why Silverstone Smart Parking</div>
+        <h2 class="section-title">Designed for the Modern Visitor</h2>
+        <p>As Formula 1 and motorsport embrace sustainable technology, Silverstone is leading the way with world-class EV infrastructure. Our smart parking platform gives every visitor — whether arriving by car, bike, or bus — the information they need to arrive confidently.</p>
+        <!-- Nested list as required by marking criteria -->
+        <ul class="nested-list">
+          <li>Electric Vehicle Support
+            <ul>
+              <li>320 dedicated EV-only bays across 4 zones</li>
+              <li>150kW ultra-rapid chargers at Zone Alpha</li>
+              <li>Compatible with all major EV connectors</li>
+            </ul>
+          </li>
+          <li>Sustainable Travel Options
+            <ul>
+              <li>42 bike and e-bike charging stations</li>
+              <li>Shuttle buses from Northampton Station on event days</li>
+              <li>Carbon offset available when booking online</li>
+            </ul>
+          </li>
+          <li>Accessible for Everyone
+            <ul>
+              <li>Dedicated accessible bays near all main entrances</li>
+              <li>Steward assistance at Gates 1, 2, and 5</li>
+              <li>Hearing loops at all information kiosks</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="animate-fade-up delay-2">
+        <!-- Copyright-free image from Unsplash (EV charging/car) -->
+        <img src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=800&q=80"
+             alt="Electric vehicle plugged into a fast charger at a car park"
+             class="img-hero"
+             style="height:380px;">
+        <p style="font-size:0.7rem;color:rgba(255,255,255,0.2);margin-top:0.4rem;margin-bottom:0;">
+          Image: Unsplash — free to use under Unsplash Licence
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LIVE ZONE SUMMARY TABLE ===== -->
+  <section style="background:#0d1520;padding:3rem 2rem;">
+    <div style="max-width:1200px;margin:0 auto;">
+      <div class="section-label">Live Status</div>
+      <h2 class="section-title">Zone Availability Overview</h2>
+      <p style="color:rgba(255,255,255,0.45);margin-bottom:1.5rem;">A quick summary of all parking zones at Silverstone Circuit. Updated regularly on event days.</p>
+      <div class="table-wrapper">
+        <table class="styled-table" aria-label="Live parking zone availability summary">
+          <thead>
+            <tr>
+              <th>Zone</th>
+              <th>Location / Gate</th>
+              <th>Total EV Bays</th>
+              <th>Available Now</th>
+              <th>Charger Type</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Zone Alpha (α)</strong></td>
+              <td>Main Entrance · Gate 2</td>
+              <td>80</td>
+              <td style="color:#4ade80;font-weight:700;" data-live-count="62" data-range="6">62</td>
+              <td>Standard + Rapid + Ultra</td>
+              <td><span class="badge badge-green">Open</span></td>
+            </tr>
+            <tr>
+              <td><strong>Zone Beta (β)</strong></td>
+              <td>South Car Park · Gate 5</td>
+              <td>120</td>
+              <td style="color:#F59E0B;font-weight:700;" data-live-count="14" data-range="4">14</td>
+              <td>Standard + Rapid</td>
+              <td><span class="badge badge-amber">Limited</span></td>
+            </tr>
+            <tr>
+              <td><strong>Zone Gamma (γ)</strong></td>
+              <td>East Overflow · Gate 7</td>
+              <td>60</td>
+              <td style="color:#4ade80;font-weight:700;" data-live-count="58" data-range="5">58</td>
+              <td>Standard</td>
+              <td><span class="badge badge-green">Open</span></td>
+            </tr>
+            <tr>
+              <td><strong>Zone Delta (δ)</strong></td>
+              <td>North Paddock · Gate 3</td>
+              <td>60</td>
+              <td style="color:#4ade80;font-weight:700;" data-live-count="44" data-range="5">44</td>
+              <td>Ultra-Rapid only</td>
+              <td><span class="badge badge-green">Open</span></td>
+            </tr>
+            <tr>
+              <td><strong>Accessible Bays</strong></td>
+              <td>All Zones · Gates 1, 2, 5</td>
+              <td>22</td>
+              <td style="color:#4ade80;font-weight:700;">18</td>
+              <td>Standard</td>
+              <td><span class="badge badge-green">Open</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ALERT SIGNUP FORM ===== -->
+  <section style="background:#1a2535;padding:3rem 2rem;border-top:1px solid rgba(255,255,255,0.06);">
+    <div style="max-width:700px;margin:0 auto;text-align:center;">
+      <div class="section-label">Stay Informed</div>
+      <h2 class="section-title">Get Race Day Parking Alerts</h2>
+      <p style="color:rgba(255,255,255,0.45);margin-bottom:2rem;">Sign up to receive email alerts when parking zones approach capacity, or before a major event. No spam — unsubscribe any time.</p>
+      <form id="alertSignupForm" novalidate style="display:flex;flex-direction:column;gap:1rem;max-width:480px;margin:0 auto;">
+        <div class="form-group" style="margin-bottom:0;">
+          <label class="form-label" for="alertName">Your Name</label>
+          <input type="text" id="alertName" class="form-input" placeholder="e.g. Sarah Holloway" required>
+        </div>
+        <div class="form-group" style="margin-bottom:0;">
+          <label class="form-label" for="alertEmail">Email Address</label>
+          <input type="email" id="alertEmail" class="form-input" placeholder="you@example.com" required>
+        </div>
+        <div class="form-group" style="margin-bottom:0;text-align:left;">
+          <label class="form-label">Alert Preferences</label>
+          <div style="display:flex;flex-direction:column;gap:0.5rem;">
+            <label class="form-check"><input type="checkbox" checked> Zone capacity alerts (when &lt;20% bays remain)</label>
+            <label class="form-check"><input type="checkbox" checked> Race day parking updates (24h before events)</label>
+            <label class="form-check"><input type="checkbox"> Monthly newsletter</label>
+          </div>
+        </div>
+        <div class="form-group" style="margin-bottom:0;text-align:left;">
+          <label class="form-check">
+            <input type="checkbox" id="alertConsent" required>
+            I consent to receiving email alerts from Silverstone Smart Parking in line with the <a href="pages/contact.html" style="color:#0EA5E9;">Privacy Notice</a>.
+          </label>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">Subscribe to Alerts →</button>
+        <p id="alertSuccess" style="display:none;color:#4ade80;font-size:0.85rem;">✓ You're subscribed! Check your inbox to confirm.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <div class="footer-logo-text">SILVERSTONE <span>SMART</span> PARKING</div>
+        <p class="footer-desc">Real-time EV parking and charging information for Silverstone Circuit visitors. Sustainable. Accessible. Smart.</p>
+      </div>
+      <div>
+        <div class="footer-heading">Pages</div>
+        <ul class="footer-links-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="pages/ev-parking.html">EV Parking</a></li>
+          <li><a href="pages/charging.html">Charging Info</a></li>
+          <li><a href="pages/bike-charging.html">Bike &amp; E-Bike</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Info</div>
+        <ul class="footer-links-list">
+          <li><a href="pages/travel.html">Travel &amp; Access</a></li>
+          <li><a href="pages/about.html">About Us</a></li>
+          <li><a href="pages/contact.html">Contact</a></li>
+          <li><a href="pages/login.html">Login</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Legal</div>
+        <ul class="footer-links-list">
+          <li><a href="#">Privacy Notice</a></li>
+          <li><a href="#">Cookie Policy</a></li>
+          <li><a href="#">Accessibility</a></li>
+          <li><a href="#">Terms of Use</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Silverstone Smart Parking · parking.silverstone.co.uk</span>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy</a>
+        <a href="#">Accessibility</a>
+        <a href="#">Cookies</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- External JS -->
+  <script src="js/main.js"></script>
+</body>
+</html>

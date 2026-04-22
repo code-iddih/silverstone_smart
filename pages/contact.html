@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<!-- Silverstone Smart Parking | Help & Contact Page -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Silverstone Smart Parking | Help & Contact Us</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <style>
+    .contact-layout { display: grid; grid-template-columns: 1fr 1.4fr; gap: 2.5rem; }
+    .ci-card {
+      background: #111827;
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 14px;
+      padding: 1.4rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 0.8rem;
+    }
+    .ci-icon {
+      width: 44px; height: 44px;
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem; flex-shrink: 0;
+    }
+    .ci-text label { font-size: 0.72rem; color: rgba(255,255,255,0.3); display: block; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.25rem; }
+    .ci-text p { font-size: 0.9rem; font-weight: 600; margin-bottom: 0; }
+    .form-card {
+      background: #111827;
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 20px;
+      padding: 2rem;
+    }
+    @media (max-width:768px) { .contact-layout { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar" aria-label="Main navigation">
+    <a href="../index.html" class="nav-logo">
+      <div class="nav-logo-icon">⚡</div>
+      <span class="nav-logo-text">SILVERSTONE <span>SMART</span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="ev-parking.html">EV Parking</a></li>
+      <li><a href="charging.html">Charging</a></li>
+      <li><a href="bike-charging.html">Bike &amp; E-Bike</a></li>
+      <li><a href="travel.html">Travel &amp; Access</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+      <li><a href="login.html" class="nav-cta">Login</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+  </nav>
+
+  <div class="page-header">
+    <div class="grid-overlay"></div>
+    <div class="page-header-inner">
+      <div class="breadcrumb"><a href="../index.html">Home</a> › <span>Help &amp; Contact</span></div>
+      <h1 class="page-title animate-fade-up delay-1">HELP &amp; CONTACT</h1>
+      <p class="page-subtitle animate-fade-up delay-2">Question about parking, charging, or accessibility? Our team is here to help.</p>
+    </div>
+  </div>
+
+  <main class="container">
+    <div class="contact-layout">
+
+      <!-- LEFT: CONTACT INFO + FAQ -->
+      <div class="animate-slide-in delay-1">
+        <div class="section-label">Get In Touch</div>
+        <h2 class="section-title">Contact Details</h2>
+
+        <div class="ci-card">
+          <div class="ci-icon si-green">📞</div>
+          <div class="ci-text">
+            <label>Phone</label>
+            <p>01327 857 271</p>
+          </div>
+        </div>
+        <div class="ci-card">
+          <div class="ci-icon si-blue">✉️</div>
+          <div class="ci-text">
+            <label>Email</label>
+            <p>parking@silverstone.co.uk</p>
+          </div>
+        </div>
+        <div class="ci-card">
+          <div class="ci-icon si-amber">🕐</div>
+          <div class="ci-text">
+            <label>Support Hours</label>
+            <p>Mon–Fri 9am–6pm · Event days 24h</p>
+          </div>
+        </div>
+        <div class="ci-card">
+          <div class="ci-icon si-green">📍</div>
+          <div class="ci-text">
+            <label>Address</label>
+            <p>Silverstone Circuit, Towcester, NN12 8TN</p>
+          </div>
+        </div>
+
+        <!-- CIRCUIT IMAGE -->
+        <img src="https://images.unsplash.com/photo-1504707748692-419802cf939d?w=700&q=80"
+             alt="Silverstone Circuit entrance and visitor welcome building"
+             class="img-rounded"
+             style="width:100%;height:200px;object-fit:cover;margin-top:1.5rem;margin-bottom:0.3rem;">
+        <p style="font-size:0.7rem;color:rgba(255,255,255,0.2);margin-bottom:1.5rem;">Image: Unsplash — free to use under Unsplash Licence</p>
+
+        <!-- MINI FAQ -->
+        <div class="section-label" style="margin-top:1rem;">Quick Answers</div>
+        <h3 style="font-family:'DM Serif Display',serif;font-size:1.4rem;margin-bottom:1rem;">Common Questions</h3>
+        <div class="faq-list">
+          <div class="faq-item">
+            <div class="faq-question">How do I report a faulty charger? <em class="faq-icon">+</em></div>
+            <div class="faq-answer">Call 01327 857 271 or use the contact form on this page. Please note the zone and bay number shown on the unit. Engineers are on site on all event days.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">Can I pre-book an EV bay? <em class="faq-icon">+</em></div>
+            <div class="faq-answer">Pre-booking is available for Zone Delta ultra-rapid chargers on race days. All other bays are first-come, first-served. Create an account to use the booking system.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">How do I request accessibility assistance? <em class="faq-icon">+</em></div>
+            <div class="faq-answer">Use the form on this page, selecting "Accessibility" as the subject. You can also call the accessibility helpline on 01327 857 200.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: CONTACT FORM -->
+      <div class="animate-fade-up delay-2">
+        <div class="form-card">
+          <h3 style="font-family:'DM Serif Display',serif;font-size:1.7rem;margin-bottom:0.4rem;">Send Us a Message</h3>
+          <p style="font-size:0.83rem;color:rgba(255,255,255,0.35);margin-bottom:1.8rem;">We aim to respond within one working day.</p>
+
+          <form id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="firstName">First Name</label>
+                <input type="text" id="firstName" class="form-input" placeholder="Sarah" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="lastName">Last Name</label>
+                <input type="text" id="lastName" class="form-input" placeholder="Holloway" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="email">Email Address</label>
+              <input type="email" id="email" class="form-input" placeholder="you@example.com" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="subject">Subject</label>
+              <!-- Form select element using JavaScript-enabled validation -->
+              <select id="subject" class="form-select" required>
+                <option value="">— Select a subject —</option>
+                <option value="ev">EV Parking Question</option>
+                <option value="charging">Charger Fault / Issue</option>
+                <option value="bike">Bike / E-Bike Charging</option>
+                <option value="access">Accessibility Request</option>
+                <option value="booking">Parking Booking</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="message">Message</label>
+              <textarea id="message" class="form-textarea" placeholder="Describe your question or issue in as much detail as possible…" required></textarea>
+            </div>
+            <div class="form-group">
+              <label class="form-check">
+                <input type="checkbox" id="consentCheck" required>
+                I consent to Silverstone Smart Parking processing my personal data to respond to this enquiry, in line with the <a href="#" style="color:#0EA5E9;">Privacy Notice</a>.
+              </label>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">Send Message →</button>
+            <p style="font-size:0.74rem;color:rgba(255,255,255,0.2);margin-top:1rem;margin-bottom:0;line-height:1.5;">
+              We will only use your data to respond to your enquiry and will not share it with third parties. See our full <a href="#" style="color:rgba(255,255,255,0.35);">Privacy Notice</a>.
+            </p>
+          </form>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- CONTACT DIRECTORY TABLE (4+ cols, 4+ rows) -->
+    <div class="section-label" style="margin-top:3rem;">Directory</div>
+    <h2 class="section-title">Full Contact Directory</h2>
+    <div class="table-wrapper">
+      <table class="styled-table" aria-label="Full contact directory for Silverstone Smart Parking departments">
+        <thead>
+          <tr>
+            <th>Department</th>
+            <th>Phone Number</th>
+            <th>Email Address</th>
+            <th>Hours</th>
+            <th>Response Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>General Enquiries</strong></td>
+            <td>01327 857 271</td>
+            <td>parking@silverstone.co.uk</td>
+            <td>Mon–Fri 9am–6pm</td>
+            <td>Within 1 working day</td>
+          </tr>
+          <tr>
+            <td><strong>Accessibility Support</strong></td>
+            <td>01327 857 200</td>
+            <td>access@silverstone.co.uk</td>
+            <td>Mon–Fri 9am–5pm</td>
+            <td>Same day</td>
+          </tr>
+          <tr>
+            <td><strong>Charger Faults</strong></td>
+            <td>01327 857 290</td>
+            <td>chargers@silverstone.co.uk</td>
+            <td>Event days 24h</td>
+            <td>Within 2 hours</td>
+          </tr>
+          <tr>
+            <td><strong>Booking &amp; Reservations</strong></td>
+            <td>01327 857 260</td>
+            <td>bookings@silverstone.co.uk</td>
+            <td>Mon–Fri 9am–5pm</td>
+            <td>Within 2 working days</td>
+          </tr>
+          <tr>
+            <td><strong>Media &amp; Press</strong></td>
+            <td>01327 857 310</td>
+            <td>press@silverstone.co.uk</td>
+            <td>Mon–Fri 9am–5pm</td>
+            <td>Within 3 working days</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- HOW TO REACH US — nested list -->
+    <div class="section-label" style="margin-top:2.5rem;">Getting Here</div>
+    <h2 class="section-title">How to Reach Us</h2>
+    <ul class="nested-list" style="max-width:700px;margin-bottom:2rem;">
+      <li>By Road
+        <ul>
+          <li>From the M1: Exit at Junction 15A, follow A43 south towards Towcester</li>
+          <li>From the M40: Exit at Junction 11, follow A422 and then A43</li>
+          <li>Postcode for sat-nav: NN12 8TN</li>
+        </ul>
+      </li>
+      <li>By Public Transport
+        <ul>
+          <li>Train to Northampton or Milton Keynes Central</li>
+          <li>Event-day shuttle buses depart from both stations</li>
+        </ul>
+      </li>
+      <li>On Arrival
+        <ul>
+          <li>Follow EV and accessible parking signage from the main gate</li>
+          <li>Stewards are present at Gates 1, 2, and 5 on all event days</li>
+        </ul>
+      </li>
+    </ul>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <div class="footer-logo-text">SILVERSTONE <span>SMART</span> PARKING</div>
+        <p class="footer-desc">Real-time EV parking and charging for Silverstone visitors.</p>
+      </div>
+      <div>
+        <div class="footer-heading">Pages</div>
+        <ul class="footer-links-list">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="ev-parking.html">EV Parking</a></li>
+          <li><a href="charging.html">Charging Info</a></li>
+          <li><a href="bike-charging.html">Bike &amp; E-Bike</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Info</div>
+        <ul class="footer-links-list">
+          <li><a href="travel.html">Travel &amp; Access</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Legal</div>
+        <ul class="footer-links-list">
+          <li><a href="#">Privacy Notice</a></li>
+          <li><a href="#">Cookie Policy</a></li>
+          <li><a href="#">Accessibility</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Silverstone Smart Parking</span>
+      <div class="footer-bottom-links"><a href="#">Privacy</a><a href="#">Accessibility</a></div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
